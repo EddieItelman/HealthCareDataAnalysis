@@ -30,7 +30,7 @@ HEALTH_REAC %>%
 merge(x = HEALTH_REAC, y = as.data.frame(HEALTH_REAC_STRUC$COU), by.x = "COU", by.y = "id") %>%  
   filter(VAR %in% c("PAGGT75O","PAGGT65O")) %>% 
   filter(TIME_FORMAT == "P1Y") %>% 
-  filter(obsTime == "2018") %>% 
+  filter(obsTime == year) %>% 
   filter(UNIT == "PHYTOTNB") %>% 
   filter(COU %in% Countries) %>% 
   ggplot(aes(x = label,
